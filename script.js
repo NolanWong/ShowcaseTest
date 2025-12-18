@@ -2,6 +2,7 @@ let slideIndex = [0];
 let slideIndex2 = [0];
 let slideIndex3 = [0];
 let slideIndex4 = [0];
+let LBModSlideIndex = [0];
 showSlides();
 showSlides2();
 showSlides3();
@@ -75,3 +76,19 @@ function showSlides4() {
   setTimeout(showSlides4, 4500); // Every 1000 counts as a second
 }
 
+function showSlidesLBMod() {
+  let i;
+  let slidesLBMod = document.getElementsByClassName("mySlidesLBMod");
+  let dots2 = document.getElementsByClassName("dotLBMod");
+  for (i = 0; i < slides2.length; i++) {
+    slidesLBMod[i].style.display = "none";  
+  }
+  slideIndex2++;
+  if (slidesLBMod > slidesLBMod.length) {slidesLBMod = 1}    
+  for (i = 0; i < dots2.length; i++) {
+    dots2[i].className = dots2[i].className.replace(" active", "");
+  }
+  slidesLBMod[LBModSlideIndex-1].style.display = "block";  
+  dots2[LBModSlideIndex-1].className += " active";
+  setTimeout(showSlidesLBMod, 4500); // Every 1000 counts as a second
+}
