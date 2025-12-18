@@ -81,7 +81,7 @@ function showSlidesLBMod() {
   let i;
   let slidesLBMod = document.getElementsByClassName("mySlidesLBMod");
   let dots2 = document.getElementsByClassName("dotLBMod");
-  for (i = 0; i < slides2.length; i++) {
+  for (i = 0; i < slidesLBMod.length; i++) {
     slidesLBMod[i].style.display = "none";  
   }
   slideIndex2++;
